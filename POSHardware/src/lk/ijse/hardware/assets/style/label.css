@@ -1,0 +1,11 @@
+
+
+
+.label{
+-fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+}
+.color1{
+    -fx-background-color : linear-gradient(from 25% 25% to 100% 100%, #005fd0, #8e9b9a);
+
+}

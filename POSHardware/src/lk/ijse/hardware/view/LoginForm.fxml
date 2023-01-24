@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="821.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hardware.controller.LoginFormController">
+   <center>
+      <VBox prefHeight="504.0" prefWidth="576.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXTextField fx:id="txtUserName" labelFloat="true" onAction="#userBtn" prefHeight="81.0" prefWidth="616.0" promptText="User" unFocusColor="BLACK">
+               <padding>
+                  <Insets top="40.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </JFXTextField>
+            <Label fx:id="lblUserError" prefHeight="17.0" prefWidth="108.0" textFill="#ff0909">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <JFXPasswordField fx:id="txtPwd" labelFloat="true" onAction="#pwdBtn" promptText="Password" unFocusColor="BLACK">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </JFXPasswordField>
+            <Label fx:id="lblPwdError" layoutX="10.0" layoutY="177.0" prefHeight="17.0" prefWidth="108.0" textFill="#f80808">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <JFXButton buttonType="RAISED" onAction="#btnLogin" prefHeight="58.0" prefWidth="196.0" ripplerFill="BLACK" style="-fx-background-color: blue;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+         <BorderPane.margin>
+            <Insets left="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <left>
+      <VBox prefHeight="390.0" prefWidth="219.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="194.0" prefWidth="199.0" styleClass="theNut" stylesheets="@../assets/style/style.css" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="80.0" prefWidth="671.0" styleClass="mainLogo" stylesheets="@../assets/style/style.css">
+               <HBox.margin>
+                  <Insets left="150.0" />
+               </HBox.margin>
+            </AnchorPane>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox prefHeight="82.0" prefWidth="821.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <CubicCurve fx:id="carve" controlX1="1013.0" controlX2="748.0" controlY1="855.998046875" controlY2="408.9980163574219" endX="663.0" endY="886.0" fill="#0e6fc98a" layoutX="-837.0" layoutY="-410.0" opacity="0.17" startX="1059.0" startY="387.0" stroke="BLACK" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

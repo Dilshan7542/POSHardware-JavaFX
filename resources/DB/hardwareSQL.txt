@@ -1,0 +1,294 @@
+create table if not exists category
+(
+    categoryId varchar(45)  not null
+        primary key,
+    name       varchar(150) not null,
+    parent     varchar(150) null,
+    recode     int          null,
+    status     tinyint(1)   null,
+    date       date         null
+);
+
+create table if not exists customer
+(
+    cId        varchar(45)   not null
+        primary key,
+    customerId varchar(45)   null,
+    name       varchar(100)  not null,
+    email      varchar(150)  null,
+    address    varchar(150)  null,
+    salary     double(10, 2) null,
+    phone      varchar(45)   null,
+    date       date          null,
+    constraint customerId
+        unique (customerId)
+);
+
+create table if not exists item
+(
+    itemCode    varchar(45)   not null
+        primary key,
+    description varchar(150)  not null,
+    remind      int           null,
+    utilPrice   double(10, 2) null,
+    status      tinyint(1)    null,
+    categoryId  varchar(45)   null,
+    date        date          null,
+    recode      int           null,
+    qty         int           null,
+    discount    int           null,
+    constraint item_ibfk_1
+        foreign key (categoryId) references category (categoryId)
+            on update cascade on delete cascade
+);
+
+create index categoryId
+    on item (categoryId);
+
+create table if not exists orders
+(
+    orderId     varchar(45) not null
+        primary key,
+    cashier     varchar(45) null,
+    date        date        not null,
+    time        time        not null,
+    cId         varchar(45) null,
+    orderType   varchar(45) null,
+    status      tinyint(1)  null,
+    netDiscount int         null,
+    constraint orders_ibfk_1
+        foreign key (cId) references customer (cId)
+            on update cascade on delete cascade
+);
+
+create table if not exists orderdetail
+(
+    orderId   varchar(45)   not null,
+    itemCode  varchar(45)   not null,
+    qty       int           not null,
+    discount  int           null,
+    utilPrice double(10, 2) not null,
+    constraint orderdetail_ibfk_1
+        foreign key (orderId) references orders (orderId)
+            on update cascade on delete cascade,
+    constraint orderdetail_ibfk_2
+        foreign key (itemCode) references item (itemCode)
+            on update cascade on delete cascade
+);
+
+create index itemCode
+    on orderdetail (itemCode);
+
+create index orderId
+    on orderdetail (orderId);
+
+create index cId
+    on orders (cId);
+
+create table if not exists payment
+(
+    payId     varchar(45)   not null
+        primary key,
+    cash      double(10, 2) null,
+    card      double(10, 2) null,
+    cardIndex int           null,
+    date      date          not null,
+    time      time          not null,
+    orderId   varchar(45)   null,
+    cId       varchar(45)   null,
+    constraint payment_ibfk_1
+        foreign key (cId) references customer (cId)
+            on update cascade on delete cascade,
+    constraint payment_ibfk_2
+        foreign key (orderId) references orders (orderId)
+            on update cascade on delete cascade
+);
+
+create table if not exists bill
+(
+    bill_Id  varchar(45)          not null
+        primary key,
+    returned tinyint(1) default 0 null,
+    date     date                 not null,
+    time     time                 not null,
+    payId    varchar(45)          null,
+    constraint bill_ibfk_1
+        foreign key (payId) references payment (payId)
+            on update cascade on delete cascade
+);
+
+create index payId
+    on bill (payId);
+
+create index cId
+    on payment (cId);
+
+create index orderId
+    on payment (orderId);
+
+create table if not exists returnbill
+(
+    return_Id varchar(45) not null
+        primary key,
+    bill_Id   varchar(45) null,
+    payId     varchar(45) null,
+    date      date        not null,
+    time      time        not null,
+    constraint returnbill_ibfk_1
+        foreign key (bill_Id) references bill (bill_Id)
+            on update cascade on delete cascade,
+    constraint returnbill_ibfk_2
+        foreign key (payId) references payment (payId)
+            on update cascade on delete cascade
+);
+
+create index bill_Id
+    on returnbill (bill_Id);
+
+create index payId
+    on returnbill (payId);
+
+create table if not exists returndetail
+(
+    return_Id   varchar(45)   not null
+        primary key,
+    itemCode    varchar(45)   not null,
+    description varchar(150)  not null,
+    qty         int           not null,
+    disc        double(10, 2) null,
+    utilPrice   double(10, 2) not null,
+    constraint returndetail_ibfk_1
+        foreign key (return_Id) references returnbill (return_Id)
+            on update cascade on delete cascade
+);
+
+create table if not exists supplier
+(
+    spId    varchar(45)  not null
+        primary key,
+    name    varchar(150) not null,
+    email   varchar(200) not null,
+    address varchar(150) not null,
+    phone   varchar(45)  null,
+    recode  int          null,
+    status  tinyint(1)   null
+);
+
+create table if not exists po
+(
+    poId        varchar(45)  not null
+        primary key,
+    arthur      varchar(150) null,
+    date        date         not null,
+    time        time         not null,
+    spId        varchar(45)  null,
+    requestDate date         null,
+    constraint po_ibfk_1
+        foreign key (spId) references supplier (spId)
+            on update cascade on delete cascade
+);
+
+create table if not exists grn
+(
+    grnId   varchar(45)  not null
+        primary key,
+    arthur  varchar(150) null,
+    invoice varchar(100) null,
+    date    date         not null,
+    time    time         not null,
+    poId    varchar(45)  null,
+    spId    varchar(45)  null,
+    constraint grn_ibfk_1
+        foreign key (poId) references po (poId)
+            on update cascade on delete cascade
+);
+
+create index poId
+    on grn (poId);
+
+create table if not exists grndetail
+(
+    grnId     varchar(45) not null,
+    costPrice double      not null,
+    qty       int         not null,
+    itemCode  varchar(45) null,
+    constraint grndetail_ibfk_1
+        foreign key (grnId) references grn (grnId)
+            on update cascade on delete cascade,
+    constraint grndetail_ibfk_2
+        foreign key (itemCode) references item (itemCode)
+            on update cascade on delete cascade
+);
+
+create index grnId
+    on grndetail (grnId);
+
+create index itemCode
+    on grndetail (itemCode);
+
+create index spId
+    on po (spId);
+
+create table if not exists podetail
+(
+    poId     varchar(45) not null,
+    itemCode varchar(45) null,
+    qty      int         null,
+    constraint podetail_ibfk_1
+        foreign key (poId) references po (poId)
+            on update cascade on delete cascade
+);
+
+create index poId
+    on podetail (poId);
+
+create table if not exists supplieritem
+(
+    spId      varchar(45)   null,
+    itemCode  varchar(45)   not null,
+    costPrice double(10, 2) null,
+    recode    int           null,
+    constraint supplieritem_ibfk_1
+        foreign key (spId) references supplier (spId)
+            on update cascade on delete cascade,
+    constraint supplieritem_ibfk_2
+        foreign key (itemCode) references item (itemCode)
+            on update cascade on delete cascade
+);
+
+create index itemCode
+    on supplieritem (itemCode);
+
+create index spId
+    on supplieritem (spId);
+
+create table if not exists user
+(
+    userId varchar(45)          not null
+        primary key,
+    name   varchar(100)         not null,
+    pwd    text                 not null,
+    empId  varchar(45)          null,
+    role   varchar(100)         null,
+    status tinyint(1) default 0 null
+);
+
+create table if not exists wastage
+(
+    wastageId varchar(45)  not null
+        primary key,
+    arthur    varchar(100) not null,
+    reason    text         null,
+    qty       int          not null,
+    cost      int          null,
+    date      date         not null,
+    time      time         not null,
+    itemCode  varchar(45)  null,
+    constraint wastage_ibfk_1
+        foreign key (itemCode) references item (itemCode)
+            on update cascade on delete cascade
+);
+
+create index itemCode
+    on wastage (itemCode);
+

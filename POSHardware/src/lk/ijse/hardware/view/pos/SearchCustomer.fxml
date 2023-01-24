@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hardware.controller.pos.SearchCustomerController">
+   <children>
+      <GridPane layoutY="-6.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="629.0" minHeight="10.0" prefHeight="565.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="600.0" minWidth="400.0" prefWidth="500.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="495.0" minWidth="10.0" prefWidth="421.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <GridPane prefHeight="391.0" prefWidth="741.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="450.0" prefWidth="450.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="1.7976931348623157E308" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="300.0" minHeight="100.0" prefHeight="125.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="300.0" minHeight="170.0" prefHeight="191.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="300.0" minHeight="173.0" prefHeight="247.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <AnchorPane prefHeight="127.0" prefWidth="418.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <HBox alignment="BOTTOM_RIGHT" layoutX="-24.0" layoutY="-24.0" prefHeight="51.0" prefWidth="538.0" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+                                       <children>
+                                          <JFXTextField maxWidth="1.7976931348623157E308" prefHeight="44.0" prefWidth="545.0" promptText="Search Customer">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="40.0" />
+                                             </HBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="156.0" prefWidth="479.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <VBox layoutX="56.0" layoutY="-76.0" prefHeight="178.0" prefWidth="578.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="15.0" prefWidth="401.0">
+                                             <children>
+                                                <Label minWidth="100.0" prefHeight="17.0" prefWidth="120.0" text="ID">
+                                                   <HBox.margin>
+                                                      <Insets right="5.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="10.0" layoutY="10.0" minWidth="-Infinity" prefHeight="30.0" prefWidth="8.0" text=":">
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="320.0" text="C001">
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="15.0" prefWidth="382.0">
+                                             <children>
+                                                <Label minWidth="100.0" prefHeight="22.0" prefWidth="120.0" text="Name">
+                                                   <HBox.margin>
+                                                      <Insets right="5.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label minWidth="-Infinity" prefHeight="30.0" prefWidth="8.0" text=":">
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label minWidth="-Infinity" prefHeight="30.0" prefWidth="360.0" text="Dilshan">
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" minHeight="54.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="90.0" prefWidth="578.0">
+                                             <children>
+                                                <Label alignment="TOP_LEFT" contentDisplay="TOP" minWidth="100.0" prefHeight="32.0" prefWidth="120.0" text="Address">
+                                                   <HBox.margin>
+                                                      <Insets right="5.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="TOP_LEFT" contentDisplay="TOP" minWidth="-Infinity" prefHeight="46.0" prefWidth="6.0" text=":" textOverrun="CLIP">
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="TOP_LEFT" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="200.0" minWidth="-Infinity" prefHeight="200.0" prefWidth="359.0" text="102/3 Ihalayagoda,ganemulle" textOverrun="CLIP" wrapText="true">
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="297.0" prefWidth="493.0" GridPane.rowIndex="3">
+                                 <children>
+                                    <VBox layoutX="56.0" prefHeight="241.0" prefWidth="493.0" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <HBox minHeight="40.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="63.0" prefWidth="449.0">
+                                             <children>
+                                                <Label alignment="TOP_LEFT" contentDisplay="TOP" minWidth="100.0" prefHeight="30.0" prefWidth="120.0" text="Email">
+                                                   <HBox.margin>
+                                                      <Insets right="5.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label minWidth="-Infinity" prefHeight="30.0" prefWidth="8.0" text=":">
+                                                   <padding>
+                                                      <Insets bottom="40.0" />
+                                                   </padding>
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="lblEmail" alignment="TOP_LEFT" contentDisplay="TOP" graphicTextGap="0.0" lineSpacing="1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="200.0" minWidth="200.0" prefHeight="200.0" prefWidth="359.0" text="dilshan.maduranga@gmail.com" textAlignment="JUSTIFY" wrapText="true">
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="32.0" prefWidth="449.0">
+                                             <children>
+                                                <Label minWidth="100.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="22.0" prefWidth="120.0" text="Phone">
+                                                   <HBox.margin>
+                                                      <Insets right="5.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label minWidth="-Infinity" prefHeight="30.0" prefWidth="8.0" text=":">
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label minWidth="-Infinity" prefHeight="22.0" prefWidth="146.0" text="075-2277759">
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="51.0" prefWidth="449.0">
+                                             <children>
+                                                <Label minWidth="100.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" prefWidth="120.0" text="Reg Date">
+                                                   <HBox.margin>
+                                                      <Insets right="5.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label minWidth="-Infinity" prefHeight="30.0" prefWidth="8.0" text=":">
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label minWidth="-Infinity" prefHeight="30.0" prefWidth="136.0" text="2022.05.04">
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </GridPane>
+                        <GridPane GridPane.columnIndex="2">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="270.0" prefWidth="350.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="51.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="1.7976931348623157E308" minHeight="20.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="200.0" minHeight="150.0" prefHeight="150.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="200.0" minHeight="150.0" prefHeight="150.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="200.0" minHeight="150.0" prefHeight="150.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <AnchorPane maxHeight="150.0" minWidth="150.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: DarkViolet;" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                                 <children>
+                                    <VBox layoutX="53.0" layoutY="-44.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <HBox prefHeight="49.0" prefWidth="330.0">
+                                             <children>
+                                                <Label prefHeight="49.0" prefWidth="99.0" text="Last bill Date">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="10.0" layoutY="10.0" prefHeight="49.0" prefWidth="9.0" text=":">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="109.0" layoutY="10.0" prefHeight="49.0" prefWidth="224.0" text="2022-11-25">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="10.0" layoutY="10.0" prefHeight="49.0" prefWidth="330.0">
+                                             <children>
+                                                <Label prefHeight="49.0" prefWidth="99.0" text="Last bill Total">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="10.0" layoutY="10.0" prefHeight="49.0" prefWidth="9.0" text=":">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="109.0" layoutY="10.0" prefHeight="49.0" prefWidth="224.0" text="10000.00">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane maxHeight="150.0" minHeight="50.0" minWidth="150.0" prefHeight="152.0" prefWidth="331.0" style="-fx-background-color: ForestGreen;" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                                 <children>
+                                    <VBox layoutX="26.0" layoutY="-66.0" prefHeight="171.0" prefWidth="311.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <HBox prefHeight="49.0" prefWidth="330.0">
+                                             <children>
+                                                <Label prefHeight="49.0" prefWidth="99.0" text="Last bill Date">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="10.0" layoutY="10.0" prefHeight="49.0" prefWidth="9.0" text=":">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="109.0" layoutY="10.0" prefHeight="49.0" prefWidth="224.0" text="2022-11-25">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="10.0" layoutY="10.0" prefHeight="49.0" prefWidth="330.0">
+                                             <children>
+                                                <Label prefHeight="49.0" prefWidth="99.0" text="Last bill Total">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="10.0" layoutY="10.0" prefHeight="49.0" prefWidth="9.0" text=":">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="109.0" layoutY="10.0" prefHeight="49.0" prefWidth="224.0" text="10000.00">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane maxHeight="150.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: LightCoral;" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                                 <children>
+                                    <VBox layoutX="41.0" layoutY="-43.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <HBox prefHeight="49.0" prefWidth="330.0">
+                                             <children>
+                                                <Label prefHeight="49.0" prefWidth="99.0" text="Last bill Date">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="10.0" layoutY="10.0" prefHeight="49.0" prefWidth="9.0" text=":">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="109.0" layoutY="10.0" prefHeight="49.0" prefWidth="224.0" text="2022-11-25">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="10.0" layoutY="10.0" prefHeight="49.0" prefWidth="330.0">
+                                             <children>
+                                                <Label prefHeight="49.0" prefWidth="99.0" text="Last bill Total">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="10.0" layoutY="10.0" prefHeight="49.0" prefWidth="9.0" text=":">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="109.0" layoutY="10.0" prefHeight="49.0" prefWidth="224.0" text="10000.00">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                 <children>
+                                    <JFXButton layoutX="76.0" layoutY="9.0" prefHeight="56.0" prefWidth="135.0" style="-fx-background-color: DarkViolet;" text="Add" textFill="WHITE" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="9.0">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

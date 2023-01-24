@@ -1,0 +1,195 @@
+
+
+.payBtn{
+-fx-font-size: 20px;
+    -fx-font-weight: bold;
+
+}
+.backCategoryBtn{
+    -fx-background-image: url('../logo/reply.png');
+    -fx-background-size: 50px 50px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.homeCategoryBtn{
+    -fx-background-image: url('../logo/home.png');
+    -fx-background-size: 50px 50px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+
+}
+.setBorder{
+    -fx-border-color: gray;
+    -fx-border-radius: 12px;
+
+}
+
+.posBackground{
+    -fx-background-color : linear-gradient(from 25% 25% to 100% 100%, #80afda, rgba(0, 0, 255, 0.95));
+}
+
+.testColor{
+
+    -fx-background-color : linear-gradient(from 25% 25% to 100% 100%,aliceblue, rgba(0, 0, 255, 0.35))
+}
+.printer{
+    -fx-background-image: url('../logo/printer.png');
+    -fx-background-size: 50px 50px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.defaultFont{
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+.priceListFont{
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+.smallFont{
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+
+}
+.totalPriceFont{
+    -fx-font-size: 27px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+
+}
+.colorDefault{
+    -fx-background-color : linear-gradient(from 25% 25% to 100% 100%,lightgray, dodgerblue);
+}
+.tab-header-background {
+    -fx-background-color : linear-gradient(from 25% 25% to 100% 100%, dodgerblue,lightgray);
+}
+.tab{
+
+    -fx-background-color: #89b2d2;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    }
+
+.tab:hover{
+    -fx-background-color: #2587ea;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+        }
+
+.tab:selected{
+    -fx-background-color: #ffffff;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+.lbl-label{
+    -fx-background-radius: 20px;
+}
+.paymentBackGround{
+    -fx-background-color : linear-gradient(from 25% 25% to 100% 100%, dodgerblue,lightgray);
+}
+.posDashBoard{
+
+    -fx-background-image: url('../logo/whiteIcon/dashboard.png');
+    -fx-background-size: 20px 20px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.orderBtn{
+    -fx-background-image: url('../logo/hand.png');
+    -fx-background-size: 30px 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.orderType{
+    -fx-background-image: url('../logo/lorry.png');
+    -fx-background-size: 30px 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+
+}
+.customer{
+    -fx-background-image: url('../logo/customer.png');
+    -fx-background-size: 30px 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+
+}
+.btnReset{
+    -fx-background-image: url('../logo/reset.png');
+    -fx-background-size: 30px 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+
+}
+.btnHold{
+    -fx-background-image: url('../logo/hold.png');
+    -fx-background-size: 60px 40px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.btnHoldPane{
+    -fx-background-color: white;
+}
+.btnHoldPane:hover{
+    -fx-background-color: #9504c0;
+}
+.voidBtn{
+    -fx-background-image: url('../logo/void.png');
+    -fx-background-size: 40px 40px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.voidBtnPane{
+    -fx-background-color: #ffffff;
+}
+.voidBtnPane:hover{
+    -fx-background-color: #e04e4e;
+}
+.paymentBtnPane{
+    -fx-background-color: #ffffff;
+}
+.paymentBtnPane:hover{
+
+    -fx-background-color: #5bdc5b;
+}
+.payBtn{
+    -fx-background-image: url('../logo/payment.png');
+    -fx-background-size: 40px 40px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.card{
+    -fx-background-image: url('../logo/card.png');
+    -fx-background-size: 60px 60px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.billClose{
+    -fx-background-image: url('../logo/billClose.png');
+    -fx-background-size: 60px 60px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.back{
+    -fx-background-image: url('../logo/back.png');
+    -fx-background-size: 60px 60px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.drawer{
+    -fx-background-image: url('../logo/darwer.png');
+    -fx-background-size: 60px 60px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+
+}
+.mail{
+    -fx-background-image: url('../logo/mail.png');
+    -fx-background-size: 60px 60px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}

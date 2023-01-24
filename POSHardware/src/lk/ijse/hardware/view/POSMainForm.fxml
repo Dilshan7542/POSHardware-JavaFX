@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1000.0" styleClass="posBackground" stylesheets="@../assets/style/pos.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hardware.controller.POSMainFormController">
+   <children>
+      <GridPane fx:id="posMainGridPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="700.0" minWidth="500.0" prefWidth="500.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="350.0" prefWidth="500.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="100.0" minHeight="75.0" prefHeight="75.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="500.0" prefHeight="519.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <GridPane layoutX="51.0" layoutY="55.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="40.0" minHeight="30.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="400.0" prefHeight="430.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="70.0" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <AnchorPane prefHeight="34.0" prefWidth="442.0" style="-fx-background-radius: 20px;">
+                           <children>
+                              <GridPane layoutX="159.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="80.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="421.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <AnchorPane GridPane.columnIndex="1">
+                                       <children>
+                                          <TextField layoutX="29.0" promptText="Search Item Code" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <JFXButton layoutX="46.0" layoutY="3.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#btnSearch" prefHeight="36.0" prefWidth="50.0" style="-fx-background-color: SlateBlue;" text="search" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="463.0" prefWidth="490.0" GridPane.rowIndex="1">
+                           <content>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <GridPane fx:id="categoryGridPane" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="502.0" prefWidth="488.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="100.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="150.0" minHeight="150.0" prefHeight="150.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                        <GridPane GridPane.rowIndex="2">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="123.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="50.0" prefWidth="126.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="50.0" prefWidth="88.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="11.0" prefWidth="11.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="183.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Pane fx:id="btnBackCategory" onMouseClicked="#btnBackCategory" prefHeight="56.0" prefWidth="69.0" styleClass="backCategoryBtn" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="12.0" left="5.0" />
+                                 </GridPane.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Pane>
+                              <Pane fx:id="btnHomeCategory" layoutX="128.0" layoutY="10.0" onMouseClicked="#btnHomeCategory" prefHeight="58.0" prefWidth="96.0" styleClass="homeCategoryBtn" GridPane.columnIndex="2">
+                                 <padding>
+                                    <Insets bottom="10.0" />
+                                 </padding>
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" right="15.0" />
+                                 </GridPane.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Pane>
+                              <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4">
+                                 <children>
+                                    <Label fx:id="lblDate" prefHeight="66.0" prefWidth="132.0" text="2022.05.04" textFill="#221f1f">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblTime" layoutX="10.0" layoutY="10.0" prefHeight="66.0" prefWidth="115.0" text="22.05.05" textFill="#221f1f">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <GridPane layoutY="-6.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="441.0" prefWidth="559.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="298.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="103.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="200.0" minHeight="10.0" prefHeight="74.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="293.0" prefWidth="500.0">
+                           <content>
+                              <TableView fx:id="mainTable" editable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="400.0" prefHeight="312.0" prefWidth="557.0" styleClass="defaultFont" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columns>
+                                    <TableColumn fx:id="colItem" maxWidth="200.0" minWidth="100.0" prefWidth="100.0" text="Item Code" />
+                                    <TableColumn fx:id="colDesc" maxWidth="600.0" minWidth="75.0" prefWidth="135.0" text="Description" />
+                                    <TableColumn fx:id="colDis" maxWidth="100.0" minWidth="40.0" prefWidth="70.0" text="Discount" />
+                                    <TableColumn fx:id="colQty" maxWidth="100.0" minWidth="50.0" prefWidth="75.0" text="Qty" />
+                                    <TableColumn fx:id="colPrice" editable="false" maxWidth="200.0" minWidth="50.0" prefWidth="70.0" text="Price" />
+                                    <TableColumn fx:id="colAmount" editable="false" maxWidth="400.0" minWidth="50.0" prefWidth="67.0" text="Amount" />
+                                    <TableColumn fx:id="colDelete" editable="false" maxWidth="100.0" minWidth="50.0" prefWidth="67.0" text="Del" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </content>
+                        </ScrollPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                           <children>
+                              <GridPane prefHeight="96.0" prefWidth="476.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="134.0" minWidth="100.0" prefWidth="200.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="178.0" minWidth="10.0" prefWidth="140.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.0" minWidth="10.0" prefWidth="157.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <AnchorPane fx:id="panePayment" disable="true" onMouseClicked="#btnPayment" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 12px;" styleClass="paymentBtnPane" GridPane.columnIndex="2">
+                                       <GridPane.margin>
+                                          <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                                       </GridPane.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Pane prefHeight="76.0" prefWidth="83.0" styleClass="payBtn" />
+                                                <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="76.0" prefWidth="124.0" style="-fx-background-radius: 12px;" text="Payment" textFill="#070606">
+                                                   <font>
+                                                      <Font name="System Bold" size="19.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets right="20.0" />
+                                                   </padding>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="btnHold" disable="true" layoutX="302.0" layoutY="15.0" onMouseClicked="#btnHold" prefHeight="76.0" prefWidth="152.0" style="-fx-background-radius: 12px;" styleClass="btnHoldPane" GridPane.columnIndex="1">
+                                       <GridPane.margin>
+                                          <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                                       </GridPane.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <children>
+                                          <HBox alignment="CENTER" layoutX="-62.0" layoutY="-36.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Pane prefHeight="76.0" prefWidth="83.0" styleClass="btnHold" />
+                                                <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="76.0" prefWidth="69.0" style="-fx-background-radius: 12px;" text="Hold" textFill="#070606">
+                                                   <font>
+                                                      <Font name="System Bold" size="19.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets right="20.0" />
+                                                   </padding>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="146.0" layoutY="10.0" onMouseClicked="#btnVoid" prefHeight="73.0" prefWidth="127.0" style="-fx-background-radius: 12px;" styleClass="voidBtnPane">
+                                       <GridPane.margin>
+                                          <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                                       </GridPane.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <children>
+                                          <HBox alignment="CENTER" layoutX="-1.0" prefHeight="76.0" prefWidth="98.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Pane prefHeight="76.0" prefWidth="83.0" styleClass="voidBtn" />
+                                                <Label contentDisplay="RIGHT" prefHeight="76.0" prefWidth="86.0" style="-fx-background-radius: 12px;" text="Void" textFill="#070606">
+                                                   <font>
+                                                      <Font name="System Bold" size="19.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets right="20.0" />
+                                                   </padding>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="96.0" prefWidth="559.0" style="-fx-background-color: LightBlue;" GridPane.rowIndex="1">
+                           <children>
+                              <GridPane layoutX="94.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="250.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.0" minWidth="100.0" prefWidth="120.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="100.0" prefWidth="150.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: MediumSeaGreen;">
+                                       <GridPane.margin>
+                                          <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                       </GridPane.margin>
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" layoutY="-24.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Label minWidth="96.0" prefHeight="40.0" prefWidth="96.0" text="Customer :" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="lblCustomer" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" onMouseClicked="#btnCustomerFade" prefHeight="40.0" prefWidth="166.0" text="N/A">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="10.0" layoutY="36.0" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: MediumSeaGreen;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                       <children>
+                                          <Label fx:id="lblTotal" layoutX="100.0" layoutY="5.0" styleClass="totalPriceFont" text="0.0" textFill="#eeeded" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="-50.0" AnchorPane.topAnchor="0.0">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <GridPane.margin>
+                                          <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                       </GridPane.margin>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="383.0" layoutY="89.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: MediumSeaGreen;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <children>
+                                          <Label fx:id="lblAllDiscount" layoutX="100.0" layoutY="5.0" onMouseClicked="#btnAllDiscount" styleClass="priceListFont" text="0.0" textFill="#eeeded" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <GridPane.margin>
+                                          <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                       </GridPane.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: MediumSeaGreen;" GridPane.rowIndex="2">
+                                       <children>
+                                          <Label layoutX="100.0" layoutY="5.0" textFill="#eeeded" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER_LEFT" layoutX="109.0" layoutY="-6.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Label minWidth="96.0" prefHeight="40.0" prefWidth="60.0" text="Cashier     :" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="lblCashier" disable="true" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" onMouseClicked="#btnOrderType" prefHeight="40.0" prefWidth="176.0" text="Dilsahn">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <GridPane.margin>
+                                          <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                       </GridPane.margin>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: MediumSeaGreen;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <children>
+                                          <Label layoutX="100.0" layoutY="5.0" text="Total" textFill="#eeeded" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <GridPane.margin>
+                                          <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                       </GridPane.margin>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: MediumSeaGreen;" GridPane.columnIndex="2">
+                                       <children>
+                                          <Label fx:id="lblSubTotal" disable="true" layoutX="100.0" layoutY="5.0" styleClass="priceListFont" text="0" textFill="#eeeded" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <GridPane.margin>
+                                          <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                       </GridPane.margin>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="383.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: MediumSeaGreen;" GridPane.columnIndex="1">
+                                       <children>
+                                          <Label layoutX="100.0" layoutY="5.0" text="Sub Total:" textFill="#eeeded" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <GridPane.margin>
+                                          <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                       </GridPane.margin>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="197.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: MediumSeaGreen;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                       </GridPane.margin>
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Label maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="106.0" text="Discount:" textFill="#eeeded">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="lblDiscountDisplay" contentDisplay="RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="75.0" text="0">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="197.0" layoutY="46.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: MediumSeaGreen;" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                       </GridPane.margin>
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Label minWidth="96.0" prefHeight="40.0" prefWidth="60.0" text="Type         :" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="lblOrderType" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" onMouseClicked="#btnOrderType" prefHeight="40.0" prefWidth="176.0" text="N/A">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane layoutX="196.0" layoutY="7.0" minWidth="100.0" onMouseClicked="#btnDashboard" prefHeight="200.0" prefWidth="150.0" style="-fx-background-color: green; -fx-background-radius: 12px;" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="25.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <children>
+                        <HBox layoutX="-64.0" layoutY="-50.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Pane prefHeight="48.0" prefWidth="74.0" styleClass="posDashBoard" />
+                              <Label alignment="CENTER" prefHeight="58.0" prefWidth="150.0" text="Dashboard" textFill="#fffdfd">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+                  <HBox layoutX="277.0" layoutY="60.0" prefHeight="40.0" prefWidth="215.0" AnchorPane.bottomAnchor="28.0" AnchorPane.topAnchor="30.0">
+                     <children>
+                        <Label disable="true" prefHeight="48.0" prefWidth="89.0" text="Order ID :">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblOrderId" disable="true" layoutX="10.0" layoutY="10.0" prefHeight="48.0" prefWidth="148.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="111.0" prefWidth="514.0" GridPane.columnIndex="1">
+               <children>
+                  <GridPane AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+                     <columnConstraints>
+                        <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="130.0" prefWidth="130.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="130.0" prefWidth="130.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="130.0" prefWidth="130.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="100.0" prefWidth="130.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="200.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <AnchorPane onMouseClicked="#btnOrders" prefHeight="54.0" prefWidth="110.0" style="-fx-background-color: white; -fx-background-radius: 12px;" GridPane.columnIndex="1">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <children>
+                              <Label fx:id="lblOrderCount" layoutX="9.0" layoutY="3.0" prefHeight="17.0" prefWidth="19.0" text="2" textFill="RED">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <HBox layoutX="-45.0" layoutY="20.0" prefHeight="40.0" prefWidth="110.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+                                 <children>
+                                    <Pane prefHeight="45.0" prefWidth="50.0" styleClass="orderBtn" />
+                                    <Label prefHeight="30.0" prefWidth="84.0" text=" Order " textFill="#7c7474">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane onMouseClicked="#btnOrderType" prefHeight="79.0" prefWidth="98.0" style="-fx-background-color: white; -fx-background-radius: 12px;" GridPane.columnIndex="2">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </GridPane.margin>
+                           <children>
+                              <HBox layoutX="-55.0" layoutY="-36.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Pane prefHeight="70.0" prefWidth="65.0" styleClass="orderType" />
+                                    <Label alignment="CENTER" onMouseClicked="#btnOrderType" prefHeight="70.0" prefWidth="60.0" text="Order Type" textFill="#7c7474" wrapText="true">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </AnchorPane>
+                        <AnchorPane onMouseClicked="#btnCustomer" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 12px;" GridPane.columnIndex="3">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <children>
+                              <HBox layoutX="-33.0" layoutY="-20.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Pane prefHeight="70.0" prefWidth="35.0" styleClass="customer" />
+                                    <Label prefHeight="70.0" prefWidth="88.0" text="Customer" textFill="#7c7474">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="btnRest" onMouseClicked="#btnRest" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 12px;" GridPane.columnIndex="4">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                           <children>
+                              <HBox layoutX="-38.0" layoutY="-36.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane prefHeight="60.0" prefWidth="42.0" styleClass="btnReset" />
+                                    <Label prefHeight="63.0" prefWidth="66.0" text="Reset" textFill="#7c7474">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </AnchorPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <StackPane fx:id="discountNumPadPane" layoutX="365.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="275.0" prefWidth="326.0" visible="false" AnchorPane.rightAnchor="309.0">
+         <children>
+            <AnchorPane prefHeight="275.0" prefWidth="339.0" style="-fx-background-color: #c8d6e5; -fx-background-radius: 20px;">
+               <children>
+                  <GridPane alignment="CENTER" layoutX="186.0" layoutY="116.0" maxWidth="400.0" styleClass="defaultFont" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="60.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="60.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="60.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="100.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="100.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="100.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="100.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#btnBackFlush" prefHeight="52.0" prefWidth="99.0" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 12px; -fx-background-radius: 12px; -fx-border-width: 2px;" text="&lt;-" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" right="2.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="160.0" onMouseClicked="#btn9" prefHeight="52.0" prefWidth="99.0" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 12px; -fx-background-radius: 12px; -fx-border-width: 2px;" text="9" GridPane.columnIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" right="2.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" onMouseClicked="#btn8" prefHeight="52.0" prefWidth="99.0" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 12px; -fx-background-radius: 12px; -fx-border-width: 2px;" text="8" GridPane.columnIndex="1" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" right="2.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="109.0" layoutY="10.0" onMouseClicked="#btn4" prefHeight="52.0" prefWidth="99.0" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 12px; -fx-background-radius: 12px; -fx-border-width: 2px;" text="4" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" right="2.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="60.0" onMouseClicked="#btn5" prefHeight="52.0" prefWidth="99.0" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 12px; -fx-background-radius: 12px; -fx-border-width: 2px;" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" right="2.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="109.0" layoutY="60.0" onMouseClicked="#btn6" prefHeight="52.0" prefWidth="99.0" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 12px; -fx-background-radius: 12px; -fx-border-width: 2px;" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" right="2.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="307.0" layoutY="110.0" onMouseClicked="#btn3" prefHeight="52.0" prefWidth="99.0" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 12px; -fx-background-radius: 12px; -fx-border-width: 2px;" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" right="2.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="208.0" layoutY="110.0" onMouseClicked="#btn2" prefHeight="52.0" prefWidth="99.0" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 12px; -fx-background-radius: 12px; -fx-border-width: 2px;" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" right="2.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="307.0" layoutY="160.0" onMouseClicked="#btnOk" prefHeight="52.0" prefWidth="99.0" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 12px; -fx-background-radius: 12px; -fx-border-width: 2px;" text="OK" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" right="2.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="208.0" layoutY="160.0" onMouseClicked="#btn0" prefHeight="52.0" prefWidth="99.0" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 12px; -fx-background-radius: 12px; -fx-border-width: 2px;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" right="2.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="109.0" layoutY="160.0" onMouseClicked="#btn7" prefHeight="52.0" prefWidth="99.0" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 12px; -fx-background-radius: 12px; -fx-border-width: 2px;" text="7">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" right="2.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="109.0" layoutY="110.0" onMouseClicked="#btn1" prefHeight="52.0" prefWidth="99.0" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 12px; -fx-background-radius: 12px; -fx-border-width: 2px;" text="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" right="2.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <JFXTextField fx:id="txtAnimationDiscount" editable="false" layoutX="74.0" layoutY="9.0" prefHeight="39.0" prefWidth="286.0" promptText="Discount" styleClass="defaultFont" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <StackPane fx:id="orderTypePane" alignment="CENTER_RIGHT" layoutX="334.0" layoutY="153.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="275.0" prefWidth="326.0" style="-fx-background-radius: 20px; -fx-background-color: #c8d6e5;" visible="false" AnchorPane.rightAnchor="340.0">
+         <children>
+            <AnchorPane prefHeight="275.0" prefWidth="339.0" style="-fx-background-radius: 20px;">
+               <children>
+                  <Label alignment="CENTER" layoutX="50.0" layoutY="44.0" onMouseClicked="#btnTakeWay" prefHeight="66.0" prefWidth="181.0" style="-fx-background-color: white; -fx-background-radius: 12px; -fx-border-color: gray; -fx-border-radius: 12px; -fx-border-width: 2px;" text="Takeaway" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+                     <font>
+                        <Font name="System Bold" size="38.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="140.0" onMouseClicked="#btnDelivery" prefHeight="66.0" prefWidth="181.0" style="-fx-background-color: white; -fx-background-radius: 12px; -fx-border-color: gray; -fx-border-radius: 12px; -fx-border-width: 2px;" text="Delevary" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+                     <font>
+                        <Font name="System Bold" size="38.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <StackPane fx:id="customerFadePane" alignment="CENTER_RIGHT" layoutX="182.0" layoutY="67.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="403.0" prefWidth="739.0" style="-fx-background-radius: 20px; -fx-background-color: #c8d6e5;" visible="false" AnchorPane.rightAnchor="200.0">
+         <children>
+            <AnchorPane prefHeight="275.0" prefWidth="339.0" style="-fx-background-radius: 20px;">
+               <children>
+                  <TableView fx:id="mainCustomerTable" layoutY="74.0" prefHeight="275.0" prefWidth="739.0" stylesheets="@../assets/style/table.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="colCustomerId" prefWidth="79.0" text="Customer Id" />
+                      <TableColumn fx:id="colName" prefWidth="66.0" text="Name" />
+                        <TableColumn fx:id="colEmail" prefWidth="109.0" text="Email" />
+                        <TableColumn fx:id="colAddress" prefWidth="54.0" text="Address" />
+                        <TableColumn fx:id="colPhone" prefWidth="60.0" text="phone" />
+                        <TableColumn fx:id="colAddBtn" prefWidth="112.0" text="Add Customer" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <JFXButton buttonType="RAISED" layoutX="599.0" layoutY="358.0" onAction="#btnAddCustomerTable" prefHeight="28.0" prefWidth="90.0" style="-fx-background-color: #e84393;" text="Add" textFill="#f5f5f5" AnchorPane.bottomAnchor="16.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="280.0" layoutY="23.0" prefHeight="36.0" prefWidth="150.0" text="Customer">
+                     <font>
+                        <Font name="System Bold" size="27.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtSearchCustomer" layoutX="479.0" layoutY="15.0" prefHeight="36.0" prefWidth="241.0" promptText="Search" styleClass="defaultFont" />
+                  <JFXButton layoutX="129.0" layoutY="11.0" onMouseClicked="#btnCustomer" prefHeight="36.0" prefWidth="74.0" style="-fx-background-color: lightblue;" text="Manage" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label layoutX="702.0" layoutY="1.0" onMouseClicked="#btnCustomerFade" prefHeight="17.0" prefWidth="19.0" text="X" textFill="#9e0e0e">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
