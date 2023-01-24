@@ -3,7 +3,7 @@ package lk.ijse.hardware.dao;
 import lk.ijse.hardware.dao.custom.impl.*;
 
 public class DaoFactory {
-    private static DaoFactory daoFactory;//factory
+    private static DaoFactory daoFactory;
     private DaoFactory(){}
     public static DaoFactory getInstance(){
         return daoFactory ==null ? daoFactory =new DaoFactory(): daoFactory;
